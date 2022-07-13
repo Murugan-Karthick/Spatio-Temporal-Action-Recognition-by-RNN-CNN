@@ -16,7 +16,7 @@ both of these aspects, we use a hybrid architecture that consists of convolution
 Specifically, we'll use a Convolutional Neural Network (CNN) and a Recurrent Neural
 Network (RNN) consisting of [GRU layers].
 
-## Data collection
+## Download the dataset
 
 In order to make training time to low, we will be using a
 subsampled version of the original UCF101 dataset. download the dataset from [UCF101 dataset](https://git.io/JGc31) link.
@@ -31,7 +31,7 @@ Before run the code you should run below the lines for installing dependencies
   pip install matplotlib
 ```
 
-## Data preprocessing
+## Preparing the dataset
 One of the many challenges of training action recognizer is figuring out a way to feed
 the videos to a network. [This blog post](https://blog.coast.ai/five-video-classification-methods-implemented-in-keras-and-tensorflow-99cad29cc0b5)
 discusses five such methods. Since a video is an ordered sequence of frames, we could
@@ -115,7 +115,7 @@ print(label_processor.get_vocabulary())
 Output: ['CricketShot', 'PlayingCello', 'Punch', 'ShavingBeard', 'TennisSwing']
 ```
 
-## The sequence model
+## Building the sequence model
 
 Now, we can feed this data to a sequence model consisting of recurrent layers like `GRU`.
 
@@ -145,7 +145,7 @@ def get_sequence_model():
     return rnn_model
 ```
 
-## Training
+## Model training
 ```
 def run_experiment():
     filepath = "./tmp/action_recognizer"
@@ -195,7 +195,7 @@ def prepare_single_video(frames):
     return frame_features, frame_mask
 ```
 
-## Making Prediction
+## Check sample predictions
 ```
 def sequence_prediction(path):
     class_vocab = label_processor.get_vocabulary()
