@@ -178,7 +178,7 @@ def run_experiment():
 
     return history, seq_model
 
-# for training a sequential model
+# for start training a sequential model
 train_performance, sequence_model = run_experiment()
 ```
 
