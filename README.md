@@ -204,3 +204,30 @@ def prepare_single_video(frames):
 
     return frame_features, frame_mask
 ```
+
+## Making Prediction
+```
+def sequence_prediction(path):
+    class_vocab = label_processor.get_vocabulary()
+
+    frames = load_video(os.path.join("test", path))
+    frame_features, frame_mask = prepare_single_video(frames)
+    probabilities = sequence_model.predict([frame_features, frame_mask])[0]
+
+    for i in np.argsort(probabilities)[::-1]:
+        print(f"  {class_vocab[i]}: {probabilities[i] * 100:5.2f}%")
+    return frames
+
+
+# This utility is for visualization.
+def to_gif(images):
+    converted_images = images.astype(np.uint8)
+    imageio.mimsave("animation.gif", converted_images, fps=10)
+    return embed.embed_file("animation.gif")
+
+
+test_video = np.random.choice(test_df["video_name"].values.tolist())
+print(f"Test video path: {test_video}")
+test_frames = sequence_prediction(test_video)
+to_gif(test_frames[:MAX_SEQ_LENGTH])
+```
