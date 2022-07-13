@@ -6,10 +6,10 @@
 
 ![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/animation.gif)
 
-  ShavingBeard: 42.38%
-  TennisSwing: 16.67%
-  PlayingCello: 15.84%
-  CricketShot: 13.08%
+  ShavingBeard: 42.38%<br>
+  TennisSwing: 16.67%<br>
+  PlayingCello: 15.84%<br>
+  CricketShot: 13.08%<br>
   Punch: 12.03%
 
 We will be using the [UCF101 dataset](https://www.crcv.ucf.edu/data/UCF101.php)
