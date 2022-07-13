@@ -155,7 +155,7 @@ def get_sequence_model():
     return rnn_model
 ```
 
-# Training
+## Training
 ```
 def run_experiment():
     filepath = "./tmp/action_recognizer"
@@ -181,3 +181,5 @@ def run_experiment():
 # for training a sequential model
 train_performance, sequence_model = run_experiment()
 ```
+
+## Model Performance
