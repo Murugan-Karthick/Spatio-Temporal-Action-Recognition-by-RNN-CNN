@@ -4,7 +4,7 @@
 
 ## Demo
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/animation.gif)
 
 We will be using the [UCF101 dataset](https://www.crcv.ucf.edu/data/UCF101.php)
 to build our action recognizer. The dataset consists of videos categorized into different actions, like
