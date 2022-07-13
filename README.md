@@ -25,3 +25,10 @@ both of these aspects, we use a hybrid architecture that consists of convolution
 (for spatial processing) as well as recurrent layers (for temporal processing).
 Specifically, we'll use a Convolutional Neural Network (CNN) and a Recurrent Neural
 Network (RNN) consisting of [GRU layers].
+
+## Data collection
+
+In order to make training time to low, we will be using a
+subsampled version of the original UCF101 dataset. download the dataset from [UCF101 dataset](https://git.io/JGc31) link.
+
+
