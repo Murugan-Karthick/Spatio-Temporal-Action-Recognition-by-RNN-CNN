@@ -216,7 +216,7 @@ to_gif(test_frames[:MAX_SEQ_LENGTH])
 
 ## Output
 
-![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/animation.gif)
+![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/animation.gif)<br>
   ShavingBeard: 42.38%<br>
   TennisSwing: 16.67%<br>
   PlayingCello: 15.84%<br>
