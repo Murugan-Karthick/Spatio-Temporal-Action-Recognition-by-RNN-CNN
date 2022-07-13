@@ -184,3 +184,23 @@ train_performance, sequence_model = run_experiment()
 
 ## Model Performance
 ![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/results.png)
+
+## Inference
+
+For inference we need to do video preprocessing before input to the model
+
+```
+def prepare_single_video(frames):
+    frames = frames[None, ...]
+    frame_mask = np.zeros(shape=(1, MAX_SEQ_LENGTH,), dtype="bool")
+    frame_features = np.zeros(shape=(1, MAX_SEQ_LENGTH, NUM_FEATURES), dtype="float32")
+
+    for i, batch in enumerate(frames):
+        video_length = batch.shape[0]
+        length = min(MAX_SEQ_LENGTH, video_length)
+        for j in range(length):
+            frame_features[i, j, :] = feature_extractor.predict(batch[None, j, :])
+        frame_mask[i, :length] = 1  # 1 = not masked, 0 = masked
+
+    return frame_features, frame_mask
+```
