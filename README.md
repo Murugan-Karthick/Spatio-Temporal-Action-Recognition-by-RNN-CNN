@@ -183,3 +183,4 @@ train_performance, sequence_model = run_experiment()
 ```
 
 ## Model Performance
+![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/results.png)
