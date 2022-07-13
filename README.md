@@ -2,6 +2,10 @@
 
 **Training a action recognizer with transfer learning and a recurrent model on the UCF101 dataset.**
 
+## Demo
+
+![alt text](http://url/to/img.png)
+
 We will be using the [UCF101 dataset](https://www.crcv.ucf.edu/data/UCF101.php)
 to build our action recognizer. The dataset consists of videos categorized into different actions, like
 
