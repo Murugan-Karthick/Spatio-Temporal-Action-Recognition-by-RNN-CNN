@@ -2,16 +2,6 @@
 
 **Training a action recognizer with transfer learning and a recurrent model on the UCF101 dataset.**
 
-## Demo
-
-![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/animation.gif)
-
-  ShavingBeard: 42.38%<br>
-  TennisSwing: 16.67%<br>
-  PlayingCello: 15.84%<br>
-  CricketShot: 13.08%<br>
-  Punch: 12.03%
-
 We will be using the [UCF101 dataset](https://www.crcv.ucf.edu/data/UCF101.php)
 to build our action recognizer. The dataset consists of videos categorized into different actions, like
 
@@ -223,3 +213,12 @@ print(f"Test video path: {test_video}")
 test_frames = sequence_prediction(test_video)
 to_gif(test_frames[:MAX_SEQ_LENGTH])
 ```
+
+## Output
+
+![alt text](https://github.com/Murugan-Karthick/Spatio-Temporal-Action-Recognition-by-RNN-CNN/blob/main/animation.gif)
+  ShavingBeard: 42.38%<br>
+  TennisSwing: 16.67%<br>
+  PlayingCello: 15.84%<br>
+  CricketShot: 13.08%<br>
+  Punch: 12.03%
