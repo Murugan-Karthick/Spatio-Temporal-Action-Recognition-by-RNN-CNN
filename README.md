@@ -217,15 +217,7 @@ def sequence_prediction(path):
     for i in np.argsort(probabilities)[::-1]:
         print(f"  {class_vocab[i]}: {probabilities[i] * 100:5.2f}%")
     return frames
-
-
-# This utility is for visualization.
-def to_gif(images):
-    converted_images = images.astype(np.uint8)
-    imageio.mimsave("animation.gif", converted_images, fps=10)
-    return embed.embed_file("animation.gif")
-
-
+    
 test_video = np.random.choice(test_df["video_name"].values.tolist())
 print(f"Test video path: {test_video}")
 test_frames = sequence_prediction(test_video)
